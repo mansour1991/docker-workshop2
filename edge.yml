@@ -1,0 +1,21 @@
+version: "3.7"
+
+
+services:
+  nodered:
+    image: nodered/node-red:latest
+    ports: 
+      - "6009:1880"
+    networks:
+      - workshop-net1
+    volumes: 
+      - workshop-nodered:/data
+
+
+networks:
+  workshop-net1:
+    external: true
+
+volumes: 
+  workshop-nodered:
+    external: true
