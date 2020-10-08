@@ -5,7 +5,7 @@ services:
     image: nodered/node-red:latest
     ports: 
       #- "6008:1880" or you let the Docker engine find a free port for you:
-      - "1880"
+      - 1880
     networks:
       - workshop-net1
     volumes: 
@@ -30,7 +30,7 @@ services:
   mosquitto:
     image: eclipse-mosquitto:latest
     ports: 
-      - "6004:1883"
+      - 1883
     networks:
       - workshop-net1
     volumes:
@@ -45,7 +45,7 @@ services:
   mongo-express: 
     image: mongo-express:latest
     ports:
-      - "8058:8081"
+      - 8081
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: password123
