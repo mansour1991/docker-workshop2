@@ -4,7 +4,8 @@ services:
   nodered:
     image: nodered/node-red:latest
     ports: 
-      - "6008:1880"
+      #- "6008:1880" or you let the Docker engine find a free port for you:
+      - "1880"
     networks:
       - workshop-net1
     volumes: 
